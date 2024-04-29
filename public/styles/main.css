@@ -1,0 +1,148 @@
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure body takes up at least the viewport height */
+  margin: 0;
+}
+
+nav {
+  background-color: #797979;
+}
+
+/* Style for all submit buttons */
+input[type="submit"],
+button[type="submit"] {
+  background-color: #797979;
+  color: #ffffff; /* White text color */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  padding: 10px 20px; /* Padding for better spacing */
+  cursor: pointer; /* Cursor style on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color change */
+}
+
+/* Hover effect */
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+  background-color: #333333;
+}
+
+/* Style for anchor tags acting as buttons */
+.button-link {
+  display: inline-block; /* Display as block to allow padding and border */
+  text-decoration: none; /* Remove default underline */
+  background-color: #797979;
+  color: #ffffff; /* White text color */
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding for better spacing */
+  cursor: pointer; /* Cursor style on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color change */
+}
+
+/* Hover effect */
+.button-link:hover {
+  background-color: #333333;
+  color: white;
+}
+
+.footer {
+  width: 100%;
+  background-color: #797979;
+  border-top: 1px solid #dee2e6;
+  padding: 20px 0;
+  margin-top: auto; /* Push footer to the bottom */
+}
+
+#logo-svg {
+  height: 28px;
+  width: 28px;
+}
+
+#footer-svg {
+  height: 40px;
+  width: 40px;
+}
+
+#app-title {
+  position: relative;
+  top: 2px;
+}
+
+/* Form container */
+.location-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px; /* Increased padding */
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 100px;
+}
+
+/* Form labels */
+.location-form label {
+  display: block;
+  margin-bottom: 10px; /* Adjusted margin */
+  font-weight: bold;
+  color: #333333;
+  font-size: 18px; /* Increased font size */
+}
+
+/* Form input fields */
+.location-form input[type="text"] {
+  width: 100%;
+  padding: 12px; /* Increased padding */
+  margin-bottom: 10px; /* Adjusted margin */
+  border: 1px solid #999999; /* Adjusted border color */
+  border-radius: 4px;
+  resize: none;
+  font-size: 18px; /* Increased font size */
+  line-height: 1.5;
+}
+
+/* Submit button */
+.location-form input[type="submit"] {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px; /* Increased font size */
+  padding: 15px 20px; /* Adjusted padding */
+  transition: background-color 0.3s ease;
+}
+
+/* Submit button hover effect */
+.location-form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+#warning-text {
+  color: red;
+  margin-top: 0px;
+  font-size: 18px;
+}
+
+#location-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.message-container {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.message-container .message {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+}
