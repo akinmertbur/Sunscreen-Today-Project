@@ -12,8 +12,8 @@
 </div>
 
 <div class="message-container">
-  <% if(locals.content) { %>
-  <h3 class="message">Test</h3>
+  <% if(locals.uv_index) { %>
+  <h3 class="message"><%= uv_index %></h3>
   <% } %> <% if(locals.error) { %>
   <h3 class="message"><%= error %></h3>
   <% } %>

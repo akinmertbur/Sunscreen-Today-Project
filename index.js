@@ -52,18 +52,20 @@ app.post("/", async (req, res) => {
   // index.ejs to display whether sunscreen is needed today.
   try {
     const response = await axios.get(OPENUV_API_URL, {
+      // Add this API Key to x-access-token header of the request.
       headers: {
         "x-access-token": apiKeyOpenuv,
       },
-
+      // Include parameters passed into the API request, specifying
+      // the latitude (lat) and longitude (lng) extracted from the coordinates array.
       params: {
         lat: coordinates[0],
         lng: coordinates[1],
       },
     });
-    console.log(response.data.result.uv);
+
     res.render("index.ejs", {
-      content: response.data.result.uv,
+      uv_index: response.data.result.uv,
     });
   } catch (error) {
     console.error("Failed to make request:", error.message);
