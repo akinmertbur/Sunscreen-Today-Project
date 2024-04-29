@@ -12,10 +12,15 @@
 </div>
 
 <div class="message-container">
-  <% if(locals.uv_index) { %>
-  <h3 class="message"><%= uv_index %></h3>
-  <% } %> <% if(locals.error) { %>
-  <h3 class="message"><%= error %></h3>
+  <% if(typeof locals.uv !== 'undefined') { %> <% if(locals.uv >= 2) { %>
+  <h3 class="message">You need to apply sunscreen today!</h3>
+  <% } else { %>
+  <h3 class="message">
+    You <span class="underline">DON'T</span> need to apply sunscreen today!
+  </h3>
+  <% } %> <% } %> <% if(typeof locals.error !== 'undefined') { %>
+  <h3 class="message"><%= locals.error %></h3>
   <% } %>
 </div>
+
 <%- include("partials/footer.ejs") %>

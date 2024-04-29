@@ -63,9 +63,9 @@ app.post("/", async (req, res) => {
         lng: coordinates[1],
       },
     });
-
+    console.log(response.data.result.uv);
     res.render("index.ejs", {
-      uv_index: response.data.result.uv,
+      uv: response.data.result.uv,
     });
   } catch (error) {
     console.error("Failed to make request:", error.message);
