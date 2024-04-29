@@ -63,7 +63,7 @@ app.post("/", async (req, res) => {
         lng: coordinates[1],
       },
     });
-    console.log(response.data.result.uv);
+
     res.render("index.ejs", {
       uv: response.data.result.uv,
     });
